@@ -1,18 +1,17 @@
 $schema: https://azuremlschemas.azureedge.net/latest/pipelineJob.schema.json
 type: pipeline
-display_name: decision_tree_training_pipeline
-experiment_name: pima-classification-training
-description: Training Pipeline to predict diabetes using Decision Tree classifier
+display_name: used_cars_training_pipeline
+experiment_name: used-cars-price-prediction
+description: Training Pipeline to predict the price of used cars
 
 inputs:
-  input:
+  raw_data:
     type: uri_file
-    path: azureml:pima-diabetes-data@latest
+    path: azureml:used-cars-data@latest
 
 outputs:
   train_data:
   test_data:
-  trained_model:
   model_info_output_path:
 
 settings:
